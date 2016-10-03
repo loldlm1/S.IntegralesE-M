@@ -7,42 +7,23 @@
     = javascript_include_tag 'application', 'data-turbolinks-track' => true
     = csrf_meta_tags
   %body
-    %header.top.theme-project{"ng-class" => "{'top-transparent': !currentTheme}"}
-      .top-bg
-      .content-wrap.nav-top
-        .top-left
-          %navigation.nav-left.ng-isolate-scope{"sky-direction" => "section", :special => "settings.mainNavigation"}
-            %ul.ng-scope
-              %li.ng-scope{"ng-class" => "{act: $root.currentPath && $root.currentPath.indexOf(item.id)!=-1, current:$root.currentPath[$root.currentPath.length-1] == item.id}", "ng-repeat" => "item in items"}
-                .nav-link.theme-project
-                  %a{:href => "", "sky-direction" => "section"}
-                    %span.ng-binding Projects
-                    %span.nav-bullet.ng-scope{"ng-if" => "special"}
-              %li.ng-scope.act.current{"ng-class" => "{act: $root.currentPath && $root.currentPath.indexOf(item.id)!=-1, current:$root.currentPath[$root.currentPath.length-1] == item.id}", "ng-repeat" => "item in items"}
-                .nav-link.theme-activity
-                  %a{:href => "", "sky-direction" => "section"}
-                    %span.ng-binding Activities
-                    %span.nav-bullet.ng-scope{"ng-if" => "special"}
-              %li.ng-scope{"ng-class" => "{act: $root.currentPath && $root.currentPath.indexOf(item.id)!=-1, current:$root.currentPath[$root.currentPath.length-1] == item.id}", "ng-repeat" => "item in items"}
-                .nav-link.theme-knowledge
-                  %a{:href => "", "sky-direction" => "section"}
-                    %span.ng-binding Knowledge
-                    %span.nav-bullet.ng-scope{"ng-if" => "special"}
-              %li.ng-scope{"ng-class" => "{act: $root.currentPath && $root.currentPath.indexOf(item.id)!=-1, current:$root.currentPath[$root.currentPath.length-1] == item.id}", "ng-repeat" => "item in items"}
-                .nav-link.theme-network
-                  %a{:href => "", "sky-direction" => "section"}
-                    %span.ng-binding Networks
-                    %span.nav-bullet.ng-scope{"ng-if" => "special"}
-              %li.ng-scope{"ng-class" => "{act: $root.currentPath && $root.currentPath.indexOf(item.id)!=-1, current:$root.currentPath[$root.currentPath.length-1] == item.id}", "ng-repeat" => "item in items"}
-                .nav-link.theme-about
-                  %a{:href => "", "sky-direction" => "section"}
-                    %span.ng-binding About us
-                    %span.nav-bullet.ng-scope{"ng-if" => "special"}
-        %a.top-logo{:href => "/"}
-          %img.top-logo-img{:src => "logoSIEM2.png"}/
-        .top-right
-          %ul.nav-right
+    %nav.navbar
+      .container-fluid
+        #bs-example-navbar-collapse-1.collapse.navbar-collapse
+          %ul.nav.navbar-nav
             %li
-              %button.btn-round.btn-search{"title" => "¡Contactanos!"}
+              %a{:href => "#"} Materiales
+            %li
+              %a{:href => "#"} Sistema
+            %li
+              %a{:href => "#"} Telecomunicacion
+            %li
+              %a{:href => "#"} Nostros!
+            %li.contact
+              %a{:href => "#", title: "Contactanos"} 
+                Contactanos 
                 %span.glyphicon.glyphicon-globe{"aria-hidden" => "true"}
+        .navbar-header
+          %a.navbar-brand{:href => "/"}
+            %img.logo-img{:alt => "S&M", :src => "logoSIEM2.png"}/
     = yield
