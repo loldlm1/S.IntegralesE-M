@@ -9,10 +9,10 @@
 }
 
 .contact {
-  left: 70%;
+  padding-bottom: 35px !important;
 }
 
-.contact > a > span {
+.contact > span {
   font-size: 25px;
 }
 
@@ -23,6 +23,10 @@
 .nav.navbar-nav {
   position: absolute;
   height: 100%;
+}
+
+.navbar-right.nav.navbar-nav {
+  position: relative;
 }
 
 .nav.navbar-nav > li {
