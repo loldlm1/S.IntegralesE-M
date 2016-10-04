@@ -9,22 +9,32 @@
   %body
     %nav.navbar
       .container-fluid
+        .navbar-header
+          %button.navbar-toggle.collapsed{"aria-expanded" => "false", "data-target" => "#bs-example-navbar-collapse-1", "data-toggle" => "collapse", :type => "button"}
+            %span.sr-only Toggle navigation
+            %span.icon-bar
+            %span.icon-bar
+            %span.icon-bar
+          %a.navbar-brand{:href => "/"}
+            %img.logo-img{:alt => "S&M", :src => "logoSIEM2.png"}/
         #bs-example-navbar-collapse-1.collapse.navbar-collapse
           %ul.nav.navbar-nav
             %li
-              %a{:href => "#"} Materiales
+              %a{:href => products_path, id: "productos"} 
+                Productos 
             %li
-              %a{:href => "#"} Sistema
+              %a{:href => systems_path, id: "sistema"} 
+                Sistema
             %li
-              %a{:href => "#"} Telecomunicacion
+              %a{:href => telecommunications_path, id: "telecomunicacion"} 
+                Telecomunicacion
             %li
-              %a{:href => "#"} Nostros!
+              %a{:href => about_us_path, id: "nosotros"} 
+                Nostros!
           %ul.nav.navbar-nav.navbar-right
             %li
               %a.contact{:href => "#", title: "Contactanos"} 
                 Contactanos 
                 %span.glyphicon.glyphicon-globe{"aria-hidden" => "true"}
-        .navbar-header
-          %a.navbar-brand{:href => "/"}
-            %img.logo-img{:alt => "S&M", :src => "logoSIEM2.png"}/
     = yield
+    

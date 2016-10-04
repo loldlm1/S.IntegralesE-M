@@ -1,0 +1,113 @@
+.navbar {
+  height: 100px;
+  margin-bottom: 0px;
+}
+
+.glyphicon {
+  top: 6px;
+}
+
+.contact {
+  padding-bottom: 35px !important;
+}
+
+.contact > span {
+  font-size: 25px;
+}
+
+.navbar > .container-fluid {
+  height: 100px;
+}
+
+.nav.navbar-nav {
+  position: absolute;
+  height: 100%;
+}
+.navbar-right.nav.navbar-nav {
+  position: relative;
+}
+@media screen and (max-width: 768px){
+  .navbar {
+    height: auto;
+  }
+  .navbar > .container-fluid {
+    height: auto;
+  }
+  .nav.navbar-nav {
+    position: static;
+    height: 100%;
+  }
+  .navbar-right.nav.navbar-nav {
+    position: static;
+  }
+  .navbar-header {
+    height: 100%;
+  }
+  .navbar-toggle {
+    border: 1px solid #858585 !important;
+    border-radius: 50% !important;
+    height: 50px;
+    width: 50px;
+  }
+  .navbar-toggle .icon-bar {
+    width: initial;
+    background-color: #858585;
+  }
+}
+button.navbar-toggle:hover {
+  border: 1px solid #666 !important;
+  transition: 0.5s;
+}
+span.icon-bar:hover {
+  background-color: #666 !important;
+  transition: 0.5s;
+}
+
+.nav.navbar-nav > li {
+  height: 100%;
+}
+
+.nav.navbar-nav > li > a {
+  height: 100%;
+  padding-top: 35px;
+  color: #858585;
+  font-size: 18px;
+}
+li > a:hover {
+  color: #666 !important;
+  transition: 0.5s;
+}
+
+.nav-icon {
+  left: 35%;
+}
+
+.navbar-brand {
+  position: absolute;
+  left: 50%;
+  top: 10%;
+  margin-left: -50px !important;  /* 50% of your logo width */
+  display: block;
+  padding: 0px;
+  height: 80px;
+}
+
+@media only screen and (max-width: 1100px) {
+  .navbar-brand {
+    left: 75%;
+    transition: 0.5s;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .navbar-brand {
+    left: 50%;
+    transition: 0.5s;
+    top:0%;
+  }
+}
+
+.logo-img {
+  width: auto;
+  height: 87%;
+}
